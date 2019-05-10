@@ -42,6 +42,7 @@ public class CustomerController {
 	@GetMapping("/{customerId}")
 	public ResponseEntity<Object> getCustomerById(@PathVariable Long customerId) {
 		try {
+			logger.info("Someone is here");
 			Customer c = customerService.findbyId(customerId);
 			if (null == c) {
 				return new ResponseEntity<Object>("Customer Not Found", HttpStatus.NOT_FOUND);

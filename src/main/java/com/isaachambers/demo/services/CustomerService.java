@@ -18,7 +18,7 @@ import com.isaachambers.demo.repository.CustomerRepository;
 
 @Service
 public class CustomerService {
-	@Value("${kafka.search.topic}")
+	@Value("${search.customer.topic}")
 	private String searchTopic;
 
 	private static final Logger logger = LoggerFactory.getLogger(CustomerService.class);
